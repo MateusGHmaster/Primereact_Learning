@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-image: url("../src/assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .App-logo {
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: white;
+  /* background-color: white; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,4 +45,16 @@
   font-family: "Pokemon";   /*Can be any text*/
   src: local("PokemonSolid"),
     url("./fonts/PokemonSolid.ttf") format("truetype");
+}
+
+.floating-label {
+  background-color: #fe3d00;
+  padding: 2px;
+  margin-top: -2rem;
+
+  -webkit-text-stroke: 0.08rem #36474f;
+}
+
+.pokefield {
+  height: fit-content;
 }
