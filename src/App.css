@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url("../src/assets/background.png");
+  background-image: url("../src/assets/background_pikachu.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -47,12 +47,17 @@
     url("./fonts/PokemonSolid.ttf") format("truetype");
 }
 
+.page-title {
+  color:  #fe3d00;
+  -webkit-text-stroke: 0.23rem #36474f;
+}
+
 .floating-label {
   background-color: #fe3d00;
   padding: 2px;
   margin-top: -2rem;
 
-  -webkit-text-stroke: 0.08rem #36474f;
+  -webkit-text-stroke: 0.03rem #36474f;
 }
 
 .pokefield {
