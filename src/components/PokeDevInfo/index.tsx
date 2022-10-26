@@ -1,11 +1,13 @@
 import { Button } from 'primereact/button';
+import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import SubscriptionResultData from '../SubscriptionResultData';
 import Title from '../Title';
 import PokeCharacterField from './PokeCharacterField';
 import PokeDevDataField from './PokeDevDataField';
 import PokePreferenceField from './PokePreferenceField';
-import { Icon } from '@iconify/react';
+
+import { useNavigate } from 'react-router-dom';
 
 
 export default function PokeDevInfo() {
@@ -14,6 +16,8 @@ export default function PokeDevInfo() {
     const [dropCharacter, setDropCharacter] = useState('');
     const [dropSeniority, setDropSeniority] = useState('');
     const [dropPokemon, setDropPokemon] = useState('');
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -24,7 +28,9 @@ export default function PokeDevInfo() {
                 <PokeCharacterField character={dropCharacter} onChangeCharacter={(value) => setDropCharacter(value)} />
             </div>
             {/* <SubscriptionResultData inputResult={input} seniorityResult={dropSeniority} pokemonResult={dropPokemon} characterResult={dropCharacter}/> */}
-            <Button className='mt-2 bg-bluegray-800 w-2 pr-1' label='Submit' onClick={() => {}}>
+            <Button className='mt-2 bg-bluegray-800 w-2 pr-1' label='Submit' onClick={() => {
+                navigate("/heiahieha")
+            }}>
                     <Icon icon='mdi:pokeball' className='absolute' />
             </Button>
         </>
