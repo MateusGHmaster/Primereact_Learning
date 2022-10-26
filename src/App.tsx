@@ -6,7 +6,7 @@ import './App.css';
 import PokeDevInfo from './components/PokeDevInfo';
 import AppRoutes from './Routers';
 import { BrowserRouter } from 'react-router-dom';
-import { Toast } from 'primereact';
+import { Toast } from 'primereact/toast';
 import { useRef } from 'react';
 
 function App() {
