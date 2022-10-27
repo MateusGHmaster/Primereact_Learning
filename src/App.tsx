@@ -4,8 +4,7 @@ import 'primeicons/primeicons.css';
 import '/node_modules/primeflex/primeflex.css';
 import './App.css';
 import PokeDevInfo from './components/PokeDevInfo';
-import AppRoutes from './Routers';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
 import { useRef } from 'react';
 
@@ -13,12 +12,14 @@ function App() {
     const toastRef: any = useRef();
 
     return (
+        
         <BrowserRouter>
             <Toast ref={toastRef} />
-            <div className='App'>
-                <header className='App-header'>
-                    <AppRoutes />
-                </header>
+            <div className='App App-header'>
+                <Routes>
+                    <Route path='/' element={<PokeDevInfo />}/>
+                    {/* <Route path='/dashboard' element={<Dashboard />}/> */}
+                </Routes>
             </div>
         </BrowserRouter>
 
